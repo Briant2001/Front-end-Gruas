@@ -1,0 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@400;700&display=swap');
+
+.content-modal{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    /* margin: 50px auto; */
+    overflow: hidden;
+    height:  100vh;
+    background: #00161C;
+ }

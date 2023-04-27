@@ -1,0 +1,27 @@
+header{
+    
+    background: #00161C;
+    padding: 5px;
+    color: #FFFFFF;
+    z-index: 30;
+    border-bottom: .5px solid rgba(255, 255, 255, 0.5    );
+    position: fixed;
+    width: 100%;
+    height: 83px;
+}
+
+.flex{
+    align-items: center;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.content-logo{
+    display: flex;
+    align-items: center;
+    height: 32px;
+    justify-content: center;
+    margin-right: 3.453rem;
+}
