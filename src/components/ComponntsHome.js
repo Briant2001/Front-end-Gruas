@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 import video from '../assets/video-grua.mp4'
 import { P, Slide, Slidershow } from "./Slider";
 import { ContentVideos,ReactPlay } from "../elements-css/NuestroTrabajoStyle";
-import { ContentFooter, FooterBox,DerReserd } from "../elements-css/Footer";
+import { ContentFooter,FooterInfo, FooterBox,DerReserd,LeyendaRedes } from "../elements-css/Footer";
 import { Li, LiRedes, Ul } from "../elements-css/Menu";
 import { Img } from "../elements-css/Menu";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
@@ -128,21 +128,23 @@ const Footer = ()=>{
 
 
         <ContentFooter>
-            <FooterBox>
-                <Img>Logo</Img>
-                <DerReserd>Gruas Arreola.&copy; Todos los derechos reservados</DerReserd>
-            </FooterBox>
-            <FooterBox>
-                <Ul>
-                    <LiRedes> <FaFacebook size={30}/> </LiRedes>
-                    <LiRedes> <FaWhatsapp size={30}/> </LiRedes>
-                </Ul>
-            </FooterBox>
-            <FooterBox>
-                <Ul>
+            <FooterInfo>
+                <FooterBox>
+                    <Img>Logo</Img>
+
+                </FooterBox>
+                <FooterBox>
                     
-                </Ul>
-            </FooterBox>
+                    <LeyendaRedes>Siguenos en</LeyendaRedes>
+                    <Ul>
+                        <LiRedes> <FaFacebook size={30}/> </LiRedes>
+                        <LiRedes> <FaWhatsapp size={30}/> </LiRedes>
+                    </Ul>
+                </FooterBox>
+            </FooterInfo>
+            
+            <DerReserd>Gruas Arreola. 2023&copy; Todos los derechos reservados</DerReserd>
+
         </ContentFooter>
 
     )
