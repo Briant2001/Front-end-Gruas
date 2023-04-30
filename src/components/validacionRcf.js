@@ -11,10 +11,8 @@ const validacionRFC= (estado) => {
         propiedades.homoclave = rfc2[5];
         propiedades.tipo_persona = rfc2[0].length > 12 ? 'Fisica' : 'Moral';
         propiedades.longitud = rfc2[0].length
-        console.log(rfc2);
         
         const res = palabrasRestringidas.filter(palabra => palabra === rfc2[1]);
-        console.log(res);
         if (res.length > 0) {
           return {
             ...propiedades,valido:"false", msg:'El RFC ingresado contiene una palabra obsena. '

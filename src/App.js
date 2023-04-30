@@ -4,6 +4,7 @@ import { Menu } from "./view/Menu";
 import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Servicios from "./view/Servicios";
 import {  useState } from "react";
+import {Footer} from '../src/components/ComponntsHome';
 
 //import { Titulo } from "./elements-css/Elements-Modal";
 
@@ -27,6 +28,8 @@ function App() {
                 
             </main>
         </Router>
+        <Footer></Footer>
+
     </>
 );
 }

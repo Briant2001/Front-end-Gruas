@@ -2,9 +2,11 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { ComponentsInput,ComponentInputCheck } from "../components/Inputs";
-import { Boton, ContenedorBotonCent, MnesajeError, Formulario, Label } from "../elements-css/Formulario";
+import { Boton, ContenedorBotonCent, MnesajeError, Formulario, ContentTuFactura,
+     ContentFormulario,ContentImagen, TituloFactura,LikRfc,TitleTuFactura,ParrafoInformacion
+    ,NotaDatos,Aviso } from "../elements-css/Formulario";
 import { validacionRFC } from '../components/validacionRcf';
-
+import Swal from 'sweetalert2'
 const Facturacion = ()=>{
     //document.querySelector('.content-modal').style.display="none";
     const [rfc,setRfc] = useState({campo:'',valido:null});
@@ -39,7 +41,27 @@ const Facturacion = ()=>{
             setCorreo({campo: '',valido:null});
             setTelefono({campo: '',valido:null});
             setCodigo({campo: '',valido:null});
-            setTerminos(false)
+            setTerminos(false);
+            
+            
+            // const MySwal = withReactContent(Swal)
+            
+            // MySwal.fire({
+            //   title: <p>Hello World</p>,
+            //   didOpen: () => {
+            //     // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+            //     MySwal.showLoading()
+            //   },
+            // }).then(() => {
+            //   return MySwal.fire(<p>Shorthand works too</p>)
+            // })
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Solicitud enviada.',
+                showConfirmButton: false,
+                timer: 1700
+              })
          }else{
           setFormulario(false)
     
@@ -48,8 +70,21 @@ const Facturacion = ()=>{
      
       }
     return (
-        <>
+        <ContentTuFactura>
+            <TitleTuFactura>Tú Factura</TitleTuFactura>
+            <ParrafoInformacion>
+            Solicitar factura además de tener efectos fiscales, también tiene otros beneficios, como son: hacer efectiva alguna garantía, acreditar la propiedad de un bien, comprobar algún gasto como parte del presupuesto o como soporte documental de la contabilidad, por lo que solicitar factura no solo es un derecho de los contribuyentes, sino una obligación de todos aquellos que deseen poner su granito de arena al desarrollo de nuestro país.
+            </ParrafoInformacion>
+            <NotaDatos>
+                <ParrafoInformacion>
+                    Para solicitar factura necesitas proporcionar tu RFC, nombre y apellidos, denominación o razón social, régimen fiscal y código postal (puedes consultar la información en tu Constancia de Situación Fiscal emitida por el SAT aquí)
+                </ParrafoInformacion>
+            </NotaDatos>
+        <ContentFormulario>
+            <ContentImagen></ContentImagen>
+
             <Formulario action="" onSubmit={onSubmit}>
+            <TituloFactura>Solicit tu factura aqui</TituloFactura>
                 <ComponentsInput
                     title="Clave del Registro Federal de Contribuyentes de la persona a favor de quien se expida."
                     estado={rfc}
@@ -123,12 +158,19 @@ const Facturacion = ()=>{
 
 
                 <ContenedorBotonCent>
-                    <p>No sabes tu RFC</p>
+                    <LikRfc href="https://www.sat.gob.mx/aplicacion/31274/consulta-tu-clave-de-rfc-mediante-curp" target="_blank" >No sabes tu RFC</LikRfc>
                     <Boton>Solicitar Factura</Boton>
                 </ContenedorBotonCent>
 
             </Formulario>
-        </>
+            </ContentFormulario>
+            <Aviso>
+                <ParrafoInformacion>
+                    Su factura sera enviada a su coreo electronico en un periodo de 24 horas habiles.
+                </ParrafoInformacion>
+            </Aviso>
+        </ContentTuFactura>
+
     )
 
 }

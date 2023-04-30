@@ -12,16 +12,19 @@ import llamada from '../assets/llamada.jpg';
 import foto1 from "../assets/foto1.jpg";
 import facturaImg from '../assets/contenido-factura.jpg'
 import { AiTwotoneFilePdf } from "react-icons/ai";
-import {ContentsGruas,Ubicacion, Informacion} from '../components/ComponntsHome';
+import {ContentsGruas,Ubicacion, Informacion,} from '../components/ComponntsHome';
 import { Box ,BoxGrua,Title,P2,Img2} from '../elements-css/Gruas';
 
 const Home =()=>{
     const iconsPropertis = {
         iconBoton:{color:"#fff",fontSize:"20px"},
     };
-    
+    const enviarMsm=()=>{
+        
+    }
     return (
         <>
+            <div className='content-modal'>
             <Slidershow controls={true} autoplay={true} velocidad="300" intervalo="8000" >
                     <Slide>
                             <Div>
@@ -44,8 +47,7 @@ const Home =()=>{
                                 <P>Llama ahora para solicitar tu servicio</P>
                                 <BotonLlamar color="#B72E2E" href="tel:+551155712751" > <BsTelephoneFill style={iconsPropertis.iconBoton}/> <p>LLamar</p></BotonLlamar>
                                 <P>ó Contactanos a travez de WhatsApp</P>
-                                <BotonLlamar color="#128C7E" href="tel:+551155712751" > <FaWhatsappSquare style={iconsPropertis.iconBoton}/> <p>WhatsApp</p></BotonLlamar>
-
+                                <BotonLlamar onClick={enviarMsm}color="#128C7E" href="tel:+551155712751" > <FaWhatsappSquare style={iconsPropertis.iconBoton}/> <p>WhatsApp</p></BotonLlamar>
                             </Div>
                             <Img src={llamada}></Img>
                             
@@ -68,7 +70,7 @@ const Home =()=>{
                         </TextoSlide> */} 
                     </Slide>
             </Slidershow>
-        
+            </div>
             <section className="destacados container">
                 <h2 className="destacados__titulo">Información</h2>
                 <a href="#">
@@ -140,9 +142,10 @@ const Home =()=>{
                     </BoxGrua>
                 </Box>
             </ContentsGruas>
+            <Informacion/>
             
             <Ubicacion/>
-            <Informacion/>
+
         </>
     )
 }

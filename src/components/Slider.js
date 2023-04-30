@@ -2,11 +2,12 @@ import { useRef,useEffect,useCallback } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import styled, { css } from "styled-components";
 
-const Slidershow = ({children,controls=true ,autoplay=false, velocidad ="500" ,intervalo="000"})=>{
-    const iconsPropertis = {
-        izq:{color:"rgba(255,255,255,.7)",fontSize:"30px"},
-        der:{color:"rgba(255,255,255,.7)",fontSize:"30px"}
-    };
+const Slidershow = ({children,controls=true ,autoplay=false, velocidad ="500" ,intervalo="000",styl={color:"rgba(255,255,255,.7)",fontSize:"30px"}})=>{
+    // console.log(styl);
+    // const iconsPropertis = {
+    //     izq:{color:"rgba(255,255,255,.7)",fontSize:"30px"},
+    //     der:{color:"rgba(255,255,255,.7)",fontSize:"30px"}
+    // };
     const slidershow= useRef(null);
     const intervaloSlider= useRef(null);
 
@@ -75,7 +76,6 @@ const Slidershow = ({children,controls=true ,autoplay=false, velocidad ="500" ,i
        
     },[autoplay,intervalo,siguiente]);
     return ( 
-        <section className="content-modal">
 
             <ContentMain>
                 <ContentSlideSwho ref={slidershow}>
@@ -83,14 +83,13 @@ const Slidershow = ({children,controls=true ,autoplay=false, velocidad ="500" ,i
                 </ContentSlideSwho>
                 {controls && <Controls>
                     <Boton onClick={anterior}>
-                        <AiOutlineLeft style={iconsPropertis.izq}/>
+                        <AiOutlineLeft style={styl}/>
                     </Boton >
                     <Boton derecha onClick={siguiente}>
-                        <AiOutlineRight style={iconsPropertis.der}/>
+                        <AiOutlineRight style={styl}/>
                     </Boton>
                 </Controls>}
             </ContentMain>
-        </section>
 
     )
 }

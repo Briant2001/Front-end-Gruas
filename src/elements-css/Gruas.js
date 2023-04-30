@@ -17,8 +17,9 @@ const Box= styled.div`
 
 const BoxGrua=styled.div`
     flex-grow: 1;
-    width: 50%;
+    width: 40%;
     margin-bottom:2rem;
+    text-align: center;
 `;
 
 const Title = styled.h2`
@@ -36,7 +37,7 @@ const P2 = styled.p`
     font-weight: 700;
 `;
 const Img2 = styled.img`
-    width: 100%;
+    width: 60%;
     min-width:300px;
 `;
 

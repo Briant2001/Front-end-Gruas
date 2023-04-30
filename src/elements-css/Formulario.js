@@ -1,25 +1,80 @@
 import styled,{css} from 'styled-components';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import image from '../assets/ps-ebpp-es.png'
 const colores = { 
     borde:"#0075FF",
     error:"#bb2929",
-    exito:"#1ed12d"
+    exito:"#1ed12d",
+    colorCenizaOscuro:"#4F4C4C",
+    aviso:"rgba(0, 94, 77, 0.9);"
 }
-
+const ContentComponents =styled.div`
+`;
+const ContentTuFactura = styled.div`
+    padding: 12px;
+    width: 950px;
+    margin: 0 auto;
+`;
+const NotaDatos = styled.div`
+    background: ${colores.aviso};
+    padding: 40px;
+    width: 95%;
+    border-radius: 12px;
+    margin:0 auto;
+    p{
+        margin: 0;
+        color:#eee;
+    }
+`;
+const TitleTuFactura = styled.h1`
+    display: inline;
+    padding: 10px 0;
+    border-radius:3px;
+    border-bottom:3px solid rgba(0,0,0,.3) ;
+`;
+const ParrafoInformacion = styled.p`
+    text-align: justify;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(0,0,0,.5);
+    margin-top: 35px;
+`;
+const ContentFormulario = styled.div`
+    justify-content: center;
+    min-width: 350px;
+    position: relative;
+    //margin: 0 auto;
+    display: flex;
+    height: 700px;
+`;
 const Formulario = styled.form`
-
-    display: grid;
-    grid-template-columns : 1fr 1fr;
-    gap:20px;
-    margin: 0 50px;
+    background-color: #DFE3F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //grid-template-columns : 1fr;
+    //gap:5px;
+    padding: 20px;
     margin-top: 25px;
+    margin-bottom: 25px;
+    width: 350px;
+    min-width: 300px;
+    height: 600px;
+    color:${colores.colorCenizaOscuro};
+    border-radius: 5px;
+`;
+const TituloFactura = styled.h3`
 
+    text-align: center;
+    font-size: 22px;
 `;
 const Label = styled.label`
         display: block;
-        font-weight:700;
-        padding:10px;
-        min-height:40px;
+        font-weight:600;
+        padding:5px;
+        min-height:20px;
+        font-size: 14px;
         cursor:pointer;
         ${props => props.valido === "false" && css`
         color:${colores.error}
@@ -27,15 +82,13 @@ const Label = styled.label`
 `;
 const GroupInput = styled.div`
     position: relative;
-    z-index: 90;
-
 `;
 
 const Input=styled.input`
     width: 100%;
     background: #fff;
     border-radius: 3px;
-    height: 45px;
+    height: 35px;
     line-height: 45px;
     padding: 0 40px;
     transition: .3s ease all;
@@ -50,13 +103,12 @@ const Input=styled.input`
 `;
 const LeyendError = styled.p`
     font-size: 12px;
-    font-size:12px;
-    margin-bottom:0;
+    margin:2px;
     color: ${colores.error};
-    display: none;
+    visibility: hidden;
     ${props => props.valido === "false" && css`
     
-        display: block;
+        visibility: visible;
 
     `}
 `;
@@ -79,7 +131,7 @@ const IconValidetion= styled(FontAwesomeIcon)`
 `;
 
 const ContenedorTerminos = styled.div`
-    grid-column: span 2 ;
+    
     input{
         margin-right:10px ;
     }
@@ -91,14 +143,13 @@ const ContenedorBotonCent = styled.div`
     display: flex;
     flex-direction:column;
     align-items:center;
-    grid-column: span 2;
     
 `;
 
 const Boton = styled.button`
     height: 45px;
     line-height: 45px;
-    width: 30%;
+    width: 60%;
     background: #000;
     color: #fff;
     font-weight: bold;
@@ -113,11 +164,11 @@ const Boton = styled.button`
 
 const MnesajeError = styled.div`
     height: 45px;
-    line-height:45px;
+    line-height:20px;
     background: #F66060;
     padding: 0px 15px;
+    font-size: 12px;
     borde-radius: 3px;
-    grid-column: span 2;
     p{
         margin: 0;
     }
@@ -126,10 +177,36 @@ const MnesajeError = styled.div`
     }
 
 `;
+const ContentImagen=styled.div`
+    width: 50%;
+    background-size: 500px 434.15px;
+    background-repeat: no-repeat;
+    background-image: url(${image});
+    background-position: 90% 30%;
+`;
+const LikRfc = styled.a`
+
+    color:${colores.colorCenizaOscuro};
+    text-decoration: underline;
+    margin: 5px 0;
+    cursor:pointer;
+`;
+
+const Aviso = styled.div`
+
+
+
+`;
 
 export {
+    ContentTuFactura,
+    ParrafoInformacion,
+    NotaDatos,
+    TitleTuFactura,
+    ContentComponents,
     Formulario,
     Label,
+    TituloFactura,
     GroupInput,
     Input,
     LeyendError,
@@ -137,5 +214,9 @@ export {
     ContenedorTerminos,
     ContenedorBotonCent,
     MnesajeError,
-    Boton
+    Boton,
+    ContentFormulario,
+    ContentImagen,
+    LikRfc,
+    Aviso,
 }
