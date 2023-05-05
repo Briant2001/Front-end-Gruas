@@ -130,12 +130,12 @@ const Footer = ()=>{
         <ContentFooter>
             <FooterInfo>
                 <FooterBox>
-                    <Img>Logo</Img>
+                    <Img/>
 
                 </FooterBox>
                 <FooterBox>
                     
-                    <LeyendaRedes>Siguenos en</LeyendaRedes>
+                    <LeyendaRedes><i>Siguenos en</i></LeyendaRedes>
                     <Ul>
                         <LiRedes> <FaFacebook size={30}/> </LiRedes>
                         <LiRedes> <FaWhatsapp size={30}/> </LiRedes>
@@ -143,7 +143,10 @@ const Footer = ()=>{
                 </FooterBox>
             </FooterInfo>
             
-            <DerReserd>Gruas Arreola. 2023&copy; Todos los derechos reservados</DerReserd>
+            <DerReserd>&copy;Todos los derechos reservados para Grúas Arreola. 2023
+                <br/>
+                Desarrollado por Alumonos del Instituto Tecnologico Superior de Huetamo.
+            </DerReserd>
 
         </ContentFooter>
 

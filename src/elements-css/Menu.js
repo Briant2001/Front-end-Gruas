@@ -32,13 +32,13 @@ const Li = styled(Link)`
     list-style: none;
     cursor: pointer;
     padding: 5px;
-    border: none;
+    border-bottom: 3px solid #00161C;
     border-radius:3px ;
     text-decoration: none;
     color: #fff;
     &:hover{
-        background:#cdcdcd;
-        color: #636363;
+        border-bottom: 3px solid #636363;
+        //color: #636363;
     }
 `;
 

@@ -1,6 +1,7 @@
 import { Img, Li, LiRedes, Ul } from "../elements-css/Menu";
 import "../css/menu.css";
 import "../css/modal.css";
+import '../css/styles.css'
 //import logo from '../assets/logo-gruas.png'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCarBurst, faFileInvoice, faHome, } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +9,15 @@ import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { FaFacebook, FaWhatsapp } from 'react-icons/fa';
 const Menu = ()=>{
     
+    const addClass = (e)=>{
+        const border = document.querySelectorAll(".border");
+        for (let index = 0; index < border.length; index++) {
+            border[index].classList.remove('border')
+            
+        }
+        e.target.classList.toggle('border');
+        
+    }
 
     return (
             <div className="flex">
@@ -17,10 +27,10 @@ const Menu = ()=>{
                     </div>
                     <nav>
                         <Ul>
-                            <Li  to="/"><FontAwesomeIcon icon={faHome}/> Home </Li>
-                            <Li  to="/Servicios"><FontAwesomeIcon icon={faCarBurst}/> Servicios</Li>
-                            <Li  to="/Facturacion"><FontAwesomeIcon icon={faFileInvoice}/> Facturacion</Li>
-                            <Li  ><FontAwesomeIcon icon={faAddressBook}/> Contacto</Li>
+                            <Li className="border" onClick={addClass} to="/"><FontAwesomeIcon icon={faHome}/> Home </Li>
+                            <Li onClick={addClass} to="/Servicios"><FontAwesomeIcon icon={faCarBurst}/> Servicios</Li>
+                            <Li onClick={addClass} to="/Facturacion"><FontAwesomeIcon icon={faFileInvoice}/> Facturacion</Li>
+                            <Li onClick={addClass} to="/"><FontAwesomeIcon icon={faAddressBook}/> Contacto</Li>
                         </Ul>
                     </nav>
                 </div>

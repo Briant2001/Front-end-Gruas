@@ -23,7 +23,6 @@ const ComponentsInput = ({title,estado, setEstado,tipo,label,placeholder,name,le
             console.log("No valido");
         }
       }
-
     return (
         <ContentComponents>
             <Label valido={estado.valido} htmlFor={name} >{label}</Label>
@@ -37,6 +36,7 @@ const ComponentsInput = ({title,estado, setEstado,tipo,label,placeholder,name,le
                     onChange={onChange}
                     onKeyUp={validationExpression}
                     onBlur={validationExpression}
+                    autoComplete='on'
                 />
                 <IconValidetion
                     icon={estado.valido === "true" ?faCircleCheck :faCircleXmark}

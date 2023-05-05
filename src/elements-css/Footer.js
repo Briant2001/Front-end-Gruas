@@ -27,6 +27,7 @@ const DerReserd = styled.p`
 const LeyendaRedes = styled.p`
     color: #eee;
     font-size: 18px;
+    
 
 `;
 export {ContentFooter,FooterInfo,FooterBox,DerReserd,LeyendaRedes}

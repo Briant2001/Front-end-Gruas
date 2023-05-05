@@ -1,10 +1,11 @@
-const Servicios =()=>{
+import { GridServices } from "../components/ComponentsServicio";
 
-    return (
-        <>
-            <h1>Servicios</h1>
-            </>
+const Servicio = ()=>{
+
+
+    return(
+        <GridServices></GridServices>
     )
 }
 
-export default Servicios;
+export default Servicio;

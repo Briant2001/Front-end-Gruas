@@ -8,12 +8,11 @@ const colores = {
     colorCenizaOscuro:"#4F4C4C",
     aviso:"rgba(0, 94, 77, 0.9);"
 }
-const ContentComponents =styled.div`
-`;
+
 const ContentTuFactura = styled.div`
     padding: 12px;
     width: 950px;
-    margin: 0 auto;
+    margin: 0 auto; 
 `;
 const NotaDatos = styled.div`
     background: ${colores.aviso};
@@ -60,10 +59,17 @@ const Formulario = styled.form`
     margin-bottom: 25px;
     width: 350px;
     min-width: 300px;
-    height: 600px;
+    height: 625px;
     color:${colores.colorCenizaOscuro};
     border-radius: 5px;
 `;
+
+const ContentComponents =styled.div`
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    
+`;
+
 const TituloFactura = styled.h3`
 
     text-align: center;
@@ -78,7 +84,7 @@ const Label = styled.label`
         cursor:pointer;
         ${props => props.valido === "false" && css`
         color:${colores.error}
-    `}
+        `}
 `;
 const GroupInput = styled.div`
     position: relative;
@@ -163,7 +169,7 @@ const Boton = styled.button`
 `;
 
 const MnesajeError = styled.div`
-    height: 45px;
+    height: 100%;
     line-height:20px;
     background: #F66060;
     padding: 0px 15px;
@@ -194,7 +200,9 @@ const LikRfc = styled.a`
 
 const Aviso = styled.div`
 
-
+    p{
+        text-align: center;
+    }
 
 `;
 

@@ -84,7 +84,7 @@ const Facturacion = ()=>{
             <ContentImagen></ContentImagen>
 
             <Formulario action="" onSubmit={onSubmit}>
-            <TituloFactura>Solicit tu factura aqui</TituloFactura>
+            <TituloFactura>LLene todos los campos</TituloFactura>
                 <ComponentsInput
                     title="Clave del Registro Federal de Contribuyentes de la persona a favor de quien se expida."
                     estado={rfc}
@@ -92,7 +92,7 @@ const Facturacion = ()=>{
                     tipo="text"
                     label="RFC:"
                     placeholder="Ingrese su RCF"
-                    name={rfc}
+                    name="rfc"
                     leyendaError="Formato de RFC incorrecto"
                     expresion={expresiones.rfc}
                     funcion ={validacionRFC}
@@ -103,7 +103,7 @@ const Facturacion = ()=>{
                     tipo="text"
                     label="Nombre:"
                     placeholder="Ingrese su Nombre"
-                    name={nombre}
+                    name="nombre"
                     leyendaError="El nombre solo puede contener letras y espacios"
                     expresion={expresiones.nombre}
                 />
@@ -111,30 +111,30 @@ const Facturacion = ()=>{
                 <ComponentsInput
                     estado={correo}
                     setEstado={setCorreo}
-                    tipo="text"
+                    tipo="email"
                     label="Correo:"
                     placeholder="Ingrese su Correo"
-                    name={correo}
+                    name="correo"
                     leyendaError="El correo solo puede contener letras, numeros, puntos."
                     expresion={expresiones.correo}
                 />
                 <ComponentsInput
                     estado={telefono}
                     setEstado={setTelefono}
-                    tipo="number"
+                    tipo="tel"
                     label="Telefono:"
                     placeholder="Ingrese su Telefono"
-                    name={telefono}
+                    name="telefono"
                     leyendaError="El telefono solo puede contener numeros y un maximo de 14 digitos"
                     expresion={expresiones.telefono}
                 />
                 <ComponentsInput
                     estado={codigo}
                     setEstado={setCodigo}
-                    tipo="number"
+                    tipo="tel"
                     label="Codigo:"
                     placeholder="Ingrese su Codigo postal"
-                    name={codigo}
+                    name="codigo"
                     leyendaError="El codigo solo puede contener numeros y un maximo de 5 digitos"
                     expresion={expresiones.codigo}
                 />

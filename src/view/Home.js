@@ -49,7 +49,7 @@ const Home =()=>{
                                 <P>ó Contactanos a travez de WhatsApp</P>
                                 <BotonLlamar onClick={enviarMsm}color="#128C7E" href="tel:+551155712751" > <FaWhatsappSquare style={iconsPropertis.iconBoton}/> <p>WhatsApp</p></BotonLlamar>
                             </Div>
-                            <Img src={llamada}></Img>
+                            <Img  src={llamada} alt="imagen-persona-llamando"></Img>
                             
                         {/* <TextoSlide colorFondo="rgba(0,0,0,0.5)" color="#fff">
                             <p>1</p>
@@ -118,7 +118,7 @@ const Home =()=>{
                             La plataforma tiene una dimensión de 6 mts. de largo por 2.50 mts. de ancho."</P2>
                     </BoxGrua>
                     <BoxGrua>
-                        <Img2 src='https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg' alt='Gruas-de-Arrastre-2'></Img2>
+                        <Img2 src="https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg" alt="Gruas-de-Arrastre-2"></Img2>
                     </BoxGrua>
                 </Box>
                 <Box>
@@ -128,7 +128,7 @@ const Home =()=>{
                             La plataforma tiene una dimensión de 6 mts. de largo por 2.50 mts. de ancho."</P2>
                     </BoxGrua>
                     <BoxGrua>
-                        <Img2 src='https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg' alt='Gruas-de-Arrastre-2'></Img2>
+                        <Img2 src="https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg" alt="Gruas-de-Arrastre-2"></Img2>
                     </BoxGrua>
                 </Box>
                 <Box>
@@ -138,7 +138,7 @@ const Home =()=>{
                             La plataforma tiene una dimensión de 6 mts. de largo por 2.50 mts. de ancho."</P2>
                     </BoxGrua>
                     <BoxGrua>
-                        <Img2 src='https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg' alt='Gruas-de-Arrastre-2'></Img2>
+                        <Img2 src="https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg" alt="Gruas-de-Arrastre-2"></Img2>
                     </BoxGrua>
                 </Box>
             </ContentsGruas>
