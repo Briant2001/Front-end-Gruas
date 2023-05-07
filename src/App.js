@@ -4,7 +4,7 @@ import { Menu } from "./view/Menu";
 import {BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Servicio from "./view/Servicios";
 import {  useState } from "react";
-import {Footer} from '../src/components/ComponntsHome';
+import {Footer} from '../src/components/Footer';
 
 //import { Titulo } from "./elements-css/Elements-Modal";
 

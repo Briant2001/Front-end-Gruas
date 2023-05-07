@@ -30,7 +30,8 @@ const Menu = ()=>{
                             <Li className="border" onClick={addClass} to="/"><FontAwesomeIcon icon={faHome}/> Home </Li>
                             <Li onClick={addClass} to="/Servicios"><FontAwesomeIcon icon={faCarBurst}/> Servicios</Li>
                             <Li onClick={addClass} to="/Facturacion"><FontAwesomeIcon icon={faFileInvoice}/> Facturacion</Li>
-                            <Li onClick={addClass} to="/"><FontAwesomeIcon icon={faAddressBook}/> Contacto</Li>
+                            <Li onClick={addClass} ><FontAwesomeIcon icon={faAddressBook}/> Contacto</Li>
+                            <Li onClick={addClass} ><FontAwesomeIcon icon={faAddressBook}/> Presupuesto Online</Li>
                         </Ul>
                     </nav>
                 </div>

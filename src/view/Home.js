@@ -2,9 +2,7 @@ import '../css/destacados.css';
 import '../css/diferenciales.css'
 import contabilidad from '../assets/contabilidad2.jpg';
 import corralon from '../assets/corralon.jpg';
-import { BiTimer } from 'react-icons/bi';
-import { RiMoneyDollarCircleFill } from 'react-icons/ri';
-import { FiUserCheck } from 'react-icons/fi';
+
 import { Slidershow,Slide,Img,H1, P, Div,BotonLlamar } from "../components/Slider";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -90,25 +88,7 @@ const Home =()=>{
                 <a href="" className="boton destacados__boton">Recibir información por correo</a>
             </section>
 
-            <section className="diferenciales container">
-                <ul className="diferenciales__lista">
-                    <li className="diferenciales__item diferenciales__item-relog">
-                        <BiTimer style={iconsPropertis.timer}/>
-                        <h2 className="item__titulo">Tiempo</h2>
-                        <p className="item__texto">¡El tiempo es importante! Trabajamos en ritmo acelerado, para atender las solicitudes de nuestros clientes.</p>
-                    </li>
-                    <li className="diferenciales__item diferenciales__item-dinero">
-                        <RiMoneyDollarCircleFill style={iconsPropertis.money}/>
-                        <h2 className="item__titulo">Enfoque</h2>
-                        <p className="item__texto">Ofrecemos servicios de calidad con precios accesibles.</p>
-                    </li>
-                    <li className="diferenciales__item diferenciales__item-quimica">
-                        <FiUserCheck style={iconsPropertis.user}/>
-                        <h2 className="item__titulo">Especialistas</h2>
-                        <p className="item__texto">Equipo especializado, con experiencia de control de maniobras.</p>
-                    </li>
-                </ul>
-            </section>
+            
 
             <ContentsGruas>
                 <Box>
@@ -149,9 +129,5 @@ const Home =()=>{
         </>
     )
 }
-const iconsPropertis1 = {
-    timer:{color:"black",fontSize:"35px"},
-    money:{color:"black",border:"0"},
-    user:{color:"black",fontSize:"35px"},
-};
+
 export default Home;

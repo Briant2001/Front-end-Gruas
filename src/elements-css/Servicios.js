@@ -1,29 +1,31 @@
 import styled from "styled-components";
 import servicio1 from '../assets/servicios/Servicio1.jpg';
-
+import accidentes from '../assets/accidentes-gruas.jpg';
+import translados from '../assets/translados-autos.jpg';
 const colores = { 
     
     colorCenizaOscuro:"#eee",
+    colorOscuro:"#",
     colorParrafos:"#1E242F",
     aviso:"rgba(0, 94, 77, 0.9);",
 }
 
 const ContentnServicios= styled.div`
-    
+
     width: 95%;
-    height: 100%;
+
     margin: 14px auto;
 
 `;
 
-const ContentDataGrid = styled.div`
+const ContentDataGrid = styled.div` 
 
     display: grid;
     grid-template-columns: calc((100% / 5 ) - 4px) calc((100% / 5 ) - 4px) calc((100% / 5 ) - 4px) calc((100% / 5 ) - 4px) calc((100% / 5 ) - 4px) ;
-    grid-template-rows: calc((100% / 4 ) - 4px) calc((100% / 4 ) - 4px) calc((100% / 4 ) - 4px) calc((100% / 4 ) - 4px) ;
+    grid-auto-rows: 200px;
     grid-gap: 4px;
-    height: 800px;
-    
+    grid-row-gap: 35px;
+
 `;
 
 const Grid1 = styled.div`
@@ -38,30 +40,51 @@ const Grid1 = styled.div`
 
     :nth-child(2){
         grid-area: 1 / 4 / span 2 / span 3;
-        padding: 12px;
+        padding: 20px;
         text-align: justify;
- 
         background: #9EAFCD;
         
     }
     :nth-child(3){
         grid-area: 3 / 1 / span 2 / span 2;
-        padding: 12px;
+        padding: 20px;
         text-align: justify;
         background: #9EAFCD;
 
     }
     :nth-child(4){
         grid-area: 3 / 3 / span 2 / span 3;
-        background-image: url(${servicio1});
+        background-image: url(${translados});
         background-size:cover;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
 
     }
+    :nth-child(5){
+        grid-area: 5 / 1 / span 2 / span 3;
+        background-image: url(${accidentes});
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        
+    }
+    :nth-child(6){
+        grid-area: 5 / 4 / span 2 / span 2;
+        padding: 20px;
+        text-align: justify;
+        background: #9EAFCD;
+    }
 `;
+const Titulo = styled.h1`
+    text-align: center;
+    color:  ${colores.colorParrafos};;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 35px 10px;
 
+`;
 const H2 = styled.h2`
     position: absolute;
     color: ${colores.colorCenizaOscuro};
@@ -73,14 +96,20 @@ const H2 = styled.h2`
     bottom: 0;
     padding: 10px;
 `;
-const Parrafo = styled.p`
-    
+const ParrafoHeader = styled.p`
         text-align: center;
         color: ${colores.colorParrafos};
         font-weight: 700;
         font-size:14px;
         line-height: 20px;
-    
+`;
+const ParrafoBody = styled.p`
+
+    text-align: justify;
+    color: ${colores.colorParrafos};
+    font-weight: 500;
+    font-size:14px;
+    line-height: 25px;    
     
 
 `;
@@ -131,10 +160,44 @@ const Button = styled.button`
         transform: scale(1.15);
     }
 `;
-// const ServiciosLi = styled.li({
-//     '&:before': {
-//       content: '"\\2022"',
-//     },
-//   })
 
-export {ContentnServicios, ContentDataGrid,Grid1,H2,Parrafo,ParrafoFooter,ServiciosUl,ServiciosLi,Button}
+/**
+ * Ventajas
+ */
+const Ventajas = styled.div`
+
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    background: #F7F4F4;
+
+`;
+const UlVentajas = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+`;
+const LiVentajas = styled.li`
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 2rem 0 2rem 5rem;
+    list-style: none;
+`;
+const H2Ventajas = styled.h2`
+    color: var(--fuente-ceniza-oscuro);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+
+`;
+const LineText = styled.p`
+    line-height: normal;
+
+`;
+export {ContentnServicios, ContentDataGrid,Grid1,H2,ParrafoHeader,ParrafoBody,ParrafoFooter,ServiciosUl,ServiciosLi,Button,Titulo,
+    Ventajas,
+    UlVentajas,
+    LiVentajas,
+    H2Ventajas,
+    LineText,
+}

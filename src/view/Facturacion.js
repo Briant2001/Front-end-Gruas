@@ -77,7 +77,7 @@ const Facturacion = ()=>{
             </ParrafoInformacion>
             <NotaDatos>
                 <ParrafoInformacion>
-                    Para solicitar factura necesitas proporcionar tu RFC, nombre y apellidos, denominación o razón social, régimen fiscal y código postal (puedes consultar la información en tu Constancia de Situación Fiscal emitida por el SAT aquí)
+                    Para solicitar factura necesitas proporcionar tu RFC, nombre y apellidos, correo, telefono y código postal (puedes consultar la información en tu Constancia de Situación Fiscal emitida por el SAT aquí)
                 </ParrafoInformacion>
             </NotaDatos>
         <ContentFormulario>

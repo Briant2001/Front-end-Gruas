@@ -1,10 +1,13 @@
-import { GridServices } from "../components/ComponentsServicio";
+import { GridServices,VentajasArreola } from "../components/ComponentsServicio";
 
 const Servicio = ()=>{
 
 
     return(
-        <GridServices></GridServices>
+        <>
+            <GridServices/>
+            <VentajasArreola/>
+        </>
     )
 }
 

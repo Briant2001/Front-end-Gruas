@@ -2,12 +2,9 @@ import { SobreNosotros, Title} from "../elements-css/Gruas";
 import { ContentUbicacion,ContentMap,Iframe,H2,Domicilio, Texto } from "../elements-css/UbicacionStyle"
 import ReactPlayer from 'react-player'
 import video from '../assets/video-grua.mp4'
-import { P, Slide, Slidershow } from "./Slider";
+import { Slide, Slidershow } from "./Slider";
 import { ContentVideos,ReactPlay } from "../elements-css/NuestroTrabajoStyle";
-import { ContentFooter,FooterInfo, FooterBox,DerReserd,LeyendaRedes } from "../elements-css/Footer";
-import { Li, LiRedes, Ul } from "../elements-css/Menu";
-import { Img } from "../elements-css/Menu";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { LiRedes, Ul } from "../elements-css/Menu";
 const ContentsGruas = ({children,title, descripcion,img})=>{
 
     return(
@@ -121,36 +118,4 @@ const Informacion = ()=>{
     )
 }
 
-const Footer = ()=>{
-
-
-    return (
-
-
-        <ContentFooter>
-            <FooterInfo>
-                <FooterBox>
-                    <Img/>
-
-                </FooterBox>
-                <FooterBox>
-                    
-                    <LeyendaRedes><i>Siguenos en</i></LeyendaRedes>
-                    <Ul>
-                        <LiRedes> <FaFacebook size={30}/> </LiRedes>
-                        <LiRedes> <FaWhatsapp size={30}/> </LiRedes>
-                    </Ul>
-                </FooterBox>
-            </FooterInfo>
-            
-            <DerReserd>&copy;Todos los derechos reservados para Grúas Arreola. 2023
-                <br/>
-                Desarrollado por Alumonos del Instituto Tecnologico Superior de Huetamo.
-            </DerReserd>
-
-        </ContentFooter>
-
-    )
-
-}
-export  {ContentsGruas,Ubicacion,Informacion,Footer};
+export  {ContentsGruas,Ubicacion,Informacion};
