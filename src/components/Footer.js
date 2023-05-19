@@ -1,5 +1,5 @@
-import { ContentFooter,FooterBox,FooterTitulo,ContenBox,Box,P,A,Red,
-    ContentCopy,Derechos
+import { ContentFooter,FooterBox,FooterTitulo,ContenBox,Box,P,A,
+    ContentCopy,Derechos,ContentRedes,BoxRed
 } from "../elements-css/Footer";
 import {BsFillHouseFill} from 'react-icons/bs';
 import { BsTelephoneFill } from "react-icons/bs";
@@ -31,7 +31,7 @@ const Footer = ()=>{
                         <Box>
                             <BiTimer style={{fontSize:"25px", color:"#eee",}}/> <P>24/7 horas</P>
                         </Box>
-                    </ContenBox>
+                    </ContenBox> 
                     
 
                 </FooterBox>
@@ -52,24 +52,24 @@ const Footer = ()=>{
                 </FooterBox>
                 <FooterBox>
                     <FooterTitulo>Siguenos en</FooterTitulo>
-                    <ContenBox>
-                        <Red>
+                    <ContentRedes>
+                        <BoxRed>
                             <FaFacebook size={30} style={{marginRight:"8px"}}/>Facebook
-                        </Red>
-                        <Red>
+                        </BoxRed>
+                        <BoxRed>
                             <FaFacebook size={30} style={{marginRight:"8px"}}/>Facebook
-                        </Red>
-                        <Red>
+                        </BoxRed>
+                        <BoxRed>
                             <FaFacebook size={30} style={{marginRight:"8px"}}/>Facebook
-                        </Red>
-                    </ContenBox>
+                        </BoxRed>
+                    </ContentRedes>
                     
                 </FooterBox>
             </ContentFooter>
             <ContentCopy>
                 <Img/>
                 <Derechos>
-                &copy;Todos los derechos reservados para Grúas Arreola. 2023
+                    &copy;Todos los derechos reservados para Grúas Arreola. 2023
                 </Derechos>
             </ContentCopy>
         </>

@@ -1,14 +1,10 @@
-import { ContentnServicios,ContentDataGrid,Titulo,Grid1,H2,ParrafoHeader,ParrafoBody,ServiciosLi, ServiciosUl,ParrafoFooter, Button, Ventajas,UlVentajas,LiVentajas,H2Ventajas,LineText } from "../elements-css/Servicios";
-import {GoVerified} from 'react-icons/go';
+import { ContentnServicios,ContentDataGrid,Titulo,Grid1,H2,ParrafoHeader,
+    ParrafoBody,ServiciosLi, ServiciosUl,ParrafoFooter, Button, Ventajas,UlVentajas,
+    LiVentajas,H2Ventajas,LineText } from "../elements-css/Servicios";
 import { BiTimer } from 'react-icons/bi';
 import { RiMoneyDollarCircleFill } from 'react-icons/ri';
 import { FiUserCheck } from 'react-icons/fi';
-import { Ul } from "../elements-css/Menu";
-console.log(GoVerified);
-const GridServices =()=>{
-    const iconsPropertis = {
-        li:{color:"#0F49B0",fontSize:"20px"},
-    };
+const GridServices =()=>{ 
     return (
 
         <ContentnServicios>
@@ -35,6 +31,10 @@ const GridServices =()=>{
                     <Button>Cotizar Ahora</Button>
                 </Grid1>
 
+
+                <Grid1 >
+                    < H2>Translados de vehículos pesados.</H2>
+                </Grid1>
                 <Grid1 >
                     <ParrafoHeader>
                         Ofrecemos servicios de traslado de coches y motos tanto a empresas como a particulares:
@@ -46,29 +46,29 @@ const GridServices =()=>{
                         Contamos con camiones y material especializado para el traslado de motocicletas y turismos.</ParrafoFooter>
                     <Button>Cotizar Ahora</Button>
                 </Grid1>
-                <Grid1 >
-                    < H2>Translados de vehículos pesados.</H2>
-                </Grid1>
+                
+
+
+
+
                 <Grid1 >
                     < H2>Rescates de coches, motos y camiones</H2>
                 </Grid1>
                 <Grid1 >
                     <ParrafoHeader>
                         Ofrecemos servicios de traslado de coches y motos tanto a empresas como a particulares:
-                        
                     </ParrafoHeader>
                     <ParrafoBody>
                         Realizamos rescates de vehículos accidentados, sea cuál sea la situación de los mismos: turismos y coches, motos, furgonetas y vehículos sobredimensionados, vehículos pesados y camiones, vehículos especiales, etc.
                         Disponemos de medios humanos y mecánicos para rescatar cualquier vehículo siniestrado en vías urbanas, vías rápidas o salidas desde vías de montaña.
                     </ParrafoBody>
                     <ParrafoFooter>
-                        
                     </ParrafoFooter>
                     <Button>Cotizar Ahora</Button>
                 </Grid1>
+
+
             </ContentDataGrid>
-
-
         </ContentnServicios>
     )
         

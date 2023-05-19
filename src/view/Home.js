@@ -1,7 +1,5 @@
 import '../css/destacados.css';
 import '../css/diferenciales.css'
-import contabilidad from '../assets/contabilidad2.jpg';
-import corralon from '../assets/corralon.jpg';
 
 import { Slidershow,Slide,Img,H1, P, Div,BotonLlamar } from "../components/Slider";
 import { FaWhatsappSquare } from "react-icons/fa";
@@ -10,8 +8,7 @@ import llamada from '../assets/llamada.jpg';
 import foto1 from "../assets/foto1.jpg";
 import facturaImg from '../assets/contenido-factura.jpg'
 import { AiTwotoneFilePdf } from "react-icons/ai";
-import {ContentsGruas,Ubicacion, Informacion,} from '../components/ComponntsHome';
-import { Box ,BoxGrua,Title,P2,Img2} from '../elements-css/Gruas';
+import {ContentsGruas,Ubicacion, Informacion,InformacionGruasArreola} from '../components/ComponntsHome';
 
 const Home =()=>{
     const iconsPropertis = {
@@ -69,59 +66,11 @@ const Home =()=>{
                     </Slide>
             </Slidershow>
             </div>
-            <section className="destacados container">
-                <h2 className="destacados__titulo">Información</h2>
-                <a href="#">
-                    <figure className="destacados__panel">
-                        
-                        <img src={contabilidad} alt="Painel de la publicación sobre la creación del logotipo" className="destacados__panel-imagen"></img>
-                        {/* <figC className="destacados__panel-texto">Conozca las etapas de cobro  de un servicio
-                        </figC> */}
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure className="destacados__panel">
-                        <img src={corralon} alt="Painel de la publicación sobre consejos de fotografía" className="destacados__panel-imagen"></img>
-                        {/* <figC className="destacados__panel-texto">Politicas del corralon</figC> */}
-                    </figure>
-                </a>
-                <a href="" className="boton destacados__boton">Recibir información por correo</a>
-            </section>
 
-            
+            <InformacionGruasArreola/>
 
-            <ContentsGruas>
-                <Box>
-                    <BoxGrua>
-                        <Title>"GRUA DE “PLATAFORMA”"</Title>
-                        <P2>"Este tipo de Grua de plataforma con londer para trasladar 2 vehículos al mismo tiempo.
-                            La plataforma tiene una dimensión de 6 mts. de largo por 2.50 mts. de ancho."</P2>
-                    </BoxGrua>
-                    <BoxGrua>
-                        <Img2 src="https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg" alt="Gruas-de-Arrastre-2"></Img2>
-                    </BoxGrua>
-                </Box>
-                <Box>
-                    <BoxGrua>
-                        <Title>"GRUA DE “PLATAFORMA”"</Title>
-                        <P2>"Este tipo de Grua de plataforma con londer para trasladar 2 vehículos al mismo tiempo.
-                            La plataforma tiene una dimensión de 6 mts. de largo por 2.50 mts. de ancho."</P2>
-                    </BoxGrua>
-                    <BoxGrua>
-                        <Img2 src="https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg" alt="Gruas-de-Arrastre-2"></Img2>
-                    </BoxGrua>
-                </Box>
-                <Box>
-                    <BoxGrua>
-                        <Title>"GRUA DE “PLATAFORMA”"</Title>
-                        <P2>"Este tipo de Grua de plataforma con londer para trasladar 2 vehículos al mismo tiempo.
-                            La plataforma tiene una dimensión de 6 mts. de largo por 2.50 mts. de ancho."</P2>
-                    </BoxGrua>
-                    <BoxGrua>
-                        <Img2 src="https://gruasxpress.com/wp-content/uploads/2021/07/Gruas-de-Arrastre-2.jpg" alt="Gruas-de-Arrastre-2"></Img2>
-                    </BoxGrua>
-                </Box>
-            </ContentsGruas>
+            <ContentsGruas/>
+                
             <Informacion/>
             
             <Ubicacion/>

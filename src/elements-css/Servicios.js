@@ -46,19 +46,20 @@ const Grid1 = styled.div`
         
     }
     :nth-child(3){
-        grid-area: 3 / 1 / span 2 / span 2;
-        padding: 20px;
-        text-align: justify;
-        background: #9EAFCD;
-
-    }
-    :nth-child(4){
         grid-area: 3 / 3 / span 2 / span 3;
         background-image: url(${translados});
         background-size:cover;
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
+        
+
+    }
+    :nth-child(4){
+        grid-area: 3 / 1 / span 2 / span 2;
+        padding: 20px;
+        text-align: justify;
+        background: #9EAFCD;
 
     }
     :nth-child(5){
@@ -78,11 +79,12 @@ const Grid1 = styled.div`
     }
 `;
 const Titulo = styled.h1`
-    text-align: center;
+    text-align: left;
     color:  ${colores.colorParrafos};;
     font-size: 28px;
     font-weight: 700;
     margin: 35px 10px;
+    
 
 `;
 const H2 = styled.h2`

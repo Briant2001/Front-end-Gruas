@@ -2,27 +2,23 @@ import {faCircleCheck,faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import { GroupInput, IconValidetion, Input, Label, LeyendError,ContenedorTerminos,ContentComponents } from '../elements-css/Formulario';
 //import { validacionRFC } from './validacionRcf';
 
-const ComponentsInput = ({title,estado, setEstado,tipo,label,placeholder,name,leyendaError,expresion,funcion})=>{
+const ComponentsInput = ({title,estado, setEstado,tipo,label,placeholder,name,leyendaError,expresion,validacionRFC})=>{
     const onChange = (e)=>{
         setEstado({campo:e.target.value});
 
-      }
+    }
 
-      const validationExpression = ()=>{
+    const validationExpression = ()=>{
         if (expresion.test(estado.campo)) {
             setEstado({...estado,valido:"true"})
-        //    if(validacionRFC){
-        //     validacionRFC(estado)
-        //    }
-           if (funcion) {
-            funcion(estado);
-           }
-           
+        if (validacionRFC) {
+            validacionRFC(estado);
+        }
         }else{
             setEstado({...estado,valido:"false"})
             console.log("No valido");
         }
-      }
+    }
     return (
         <ContentComponents>
             <Label valido={estado.valido} htmlFor={name} >{label}</Label>
@@ -51,7 +47,7 @@ const ComponentsInput = ({title,estado, setEstado,tipo,label,placeholder,name,le
 const ComponentInputCheck = ({type,estado,setEstado,name})=>{
     const onChangeTerminos =(e)=>{
         setEstado(e.target.checked)
-      }
+    }
     return(
         <>
             <ContenedorTerminos>

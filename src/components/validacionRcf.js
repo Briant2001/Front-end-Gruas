@@ -3,7 +3,7 @@ const validacionRFC= (estado) => {
     const rfc = estado.campo;
         const reg = /^([a-z]{3,5})(\d{2})(\d{2})(\d{2})([0-9a-z]{3})$/i
         const rfc2 = rfc.match(reg);
-
+ 
         propiedades.rfc_input = rfc2[0];
         propiedades.fecha_nacimiento_anio=rfc2[2]
         propiedades.fecha_nacimiento_mes=rfc2[3]

@@ -42,7 +42,13 @@ const Facturacion = ()=>{
             setTelefono({campo: '',valido:null});
             setCodigo({campo: '',valido:null});
             setTerminos(false);
-            
+            let json = JSON.stringify({n:"ss"})
+            fetch("http://localhost:3001/transaction",{
+                method:"Post",
+                body : json
+            }).then(x=>{
+                console.log(x);
+            })
             
             // const MySwal = withReactContent(Swal)
             
