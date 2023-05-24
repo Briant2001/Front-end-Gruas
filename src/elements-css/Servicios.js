@@ -13,7 +13,6 @@ const colores = {
 const ContentnServicios= styled.div`
 
     width: 95%;
-
     margin: 14px auto;
 
 `;
@@ -105,7 +104,7 @@ const ParrafoHeader = styled.p`
         font-size:14px;
         line-height: 20px;
 `;
-const ParrafoBody = styled.p`
+const ParrafoBody = styled.div`
 
     text-align: justify;
     color: ${colores.colorParrafos};

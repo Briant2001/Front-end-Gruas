@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import logo from '../assets/logo-gruas.png'
 import {Link } from "react-router-dom";
 
@@ -40,7 +40,29 @@ const Li = styled(Link)`
         border-bottom: 3px solid #636363;
         //color: #636363;
     }
+
+        ${(props) => {
+            switch (props.barra) {
+                case "true":
+                    return css`
+                        &&{border-bottom:${border} ;}
+                    `;
+                    case "false":
+                        return css`
+                            &{border-bottom:none ;}
+                        
+                        `;
+                default:
+                        return css`
+                            &{border-bottom:none ;}
+
+                    `;
+            }
+        }}
+    
+    
 `;
+const border = " 3px solid #fff !important";
 
 const LiRedes = styled.li`
     list-style: none;

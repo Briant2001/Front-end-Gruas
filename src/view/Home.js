@@ -24,14 +24,14 @@ const Home =()=>{
                     <Slide>
                             <Div>
                                 <H1>
-                                    SERVICIO DE GRÚAS HUETAMO
+                                    GRUAS Y MANIOBRAS ARREOLA S.A. DE C.V.
                                 </H1>
                                 <P>Gruas Arreola es una pequeña empresa que ofrece el mejor sercicio de Grúas Arrastre, Salvamento y Depósito de Vehículos</P>
                             </Div>
                             <Img src={foto1} alt="imagen"></Img>
                             
                         {/* <TextoSlide colorFondo="rgba(0,0,0,0.5)" color="#fff">
-                            <p>1</p>
+                            <p>1</p> 
                         </TextoSlide> */} 
                     </Slide>
                     <Slide>

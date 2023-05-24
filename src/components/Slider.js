@@ -56,7 +56,6 @@ const Slidershow = ({children,controls=true ,autoplay=false, velocidad ="500" ,i
                 slidershow.current.style.transform = `translateX(0)`;
 
             },100)
-             
         }
     
 
@@ -73,7 +72,7 @@ const Slidershow = ({children,controls=true ,autoplay=false, velocidad ="500" ,i
             //     intervaloSlider.current = setInterval(siguiente,intervalo)
             // })
         }
-       
+    
     },[autoplay,intervalo,siguiente]);
     return ( 
 

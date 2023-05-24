@@ -1,14 +1,18 @@
 import {ContenedorAzul,ContenedorBlanco,
     ContentInfor,BotonCorreo,
     Box,BoxGrua,Title,P2,Img2,
-    ContentMap,Iframe,H2,Domicilio,CardDom, Texto,
+    ContentMap,Iframe,H2,Domicilio,CardDom, Item,
     ContentVideos,ReactPlay
 } from "../elements-css/HomeCss";
+
 import contabilidad from '../assets/contabilidad2.jpg';
 import corralon from '../assets/corralon.jpg';
 import ReactPlayer from 'react-player';
 import video from '../assets/video-grua.mp4';
 import { Slide, Slidershow } from "./Slider";
+import { BsFillHouseFill, BsTelephoneFill } from "react-icons/bs";
+import { MdOutlineEmail } from "react-icons/md";
+import { BiTimer } from "react-icons/bi";
 
 const InformacionGruasArreola = ()=>{
     return (
@@ -156,20 +160,23 @@ const Ubicacion = ()=>{
             <ContentMap>
                 <Domicilio>
                     <CardDom>
-                        <H2>Domicilio</H2>
-                        <Texto>
-                        Juan puede tener el local de su negocio en la calle B No. 4.
-                        </Texto>
-                        <Texto>
-                            <a href="tel:+551155712751" className="institucional__contacto-telefono">+55 11 55712751</a> o
-                        </Texto>
-                        <Texto>
-                        <a href="mailto:contato@apeperia.com" className="institucional__contacto-email">contato@apeperia.com</a>
+                    <H2>Direccion</H2>
 
-                        </Texto>
+                        <Item>
+                            <BsFillHouseFill style={{fontSize:"30px", color:"#eee",}}/> <p>CARR. HUETAMO - ZITACUARO KM. 3+200 3/NO. COL.CUTZEO C.P.61940 HUETAMO MICHOACAN</p>
+                        </Item>
+                        <Item>
+                            <BsTelephoneFill  style={{fontSize:"25px", color:"#eee",}}/>
+                            <p> <a  href="tel:+524351070550" >+52 435-107-0550</a> ó <a  href="tel:+524351007849" >+52 435-100-7849</a>
+                            </p>
+                        </Item>
+                        
+                        <Item>
+                            <MdOutlineEmail style={{fontSize:"25px", color:"#eee",}}/> <p><a href="mailto:gruasarreola@hotmail.com">gruasarreola@hotmail.com</a></p>
+                        </Item>
                     </CardDom>
                 </Domicilio>
-            <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30246.182226108504!2d-100.91805305135085!3d18.629287153353236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8432dc8ae5d460ef%3A0xd3cec3f0e4bfc0fc!2s61940%20Huetamo%20de%20N%C3%BA%C3%B1ez%2C%20Mich.!5e0!3m2!1ses-419!2smx!4v1670038718468!5m2!1ses-419!2smx" width="600" height="450"
+            <Iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7561.107325276158!2d-100.89658080270276!3d18.639134921160053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8432db7e00669643%3A0x73e24cf273d4df8f!2sZitacuaro%2C%2061940%20Huetamo%20de%20N%C3%BA%C3%B1ez%2C%20Mich.!5e0!3m2!1ses!2smx!4v1684913900820!5m2!1ses!2smx" width="600" height="450"
                     allowFullScreen="" loading='lazy' referrerPolicy='no-referrer-when-downgrade' ></Iframe>
             </ContentMap>
         </ContenedorBlanco>

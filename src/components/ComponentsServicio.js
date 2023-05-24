@@ -23,7 +23,6 @@ const GridServices =()=>{
                             <ServiciosLi>Movemos vehículos dados de baja hasta el desguace.</ServiciosLi>
                             <ServiciosLi>Trasladamos vehículos sin seguro que no pueden circular.</ServiciosLi>
                             <ServiciosLi>Transportamos coches y motos de un concesionario a otro.</ServiciosLi>
-                            
                         </ServiciosUl>
                     </ParrafoBody>
                     
@@ -46,10 +45,6 @@ const GridServices =()=>{
                         Contamos con camiones y material especializado para el traslado de motocicletas y turismos.</ParrafoFooter>
                     <Button>Cotizar Ahora</Button>
                 </Grid1>
-                
-
-
-
 
                 <Grid1 >
                     < H2>Rescates de coches, motos y camiones</H2>

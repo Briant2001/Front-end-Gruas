@@ -163,8 +163,9 @@ const Boton = styled.button`
     border-radius: 3px;
     cursor:pointer;
     transition: .1s ease all;
+    margin: 0 auto;
     &:hover{
-        box-shadow: 3px 0px 3px rgba(163,163,163,1)
+        box-shadow: 5px 0px 5px rgba(163,163,163,1);
     }
 `;
 

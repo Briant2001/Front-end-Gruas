@@ -13,7 +13,6 @@ const Footer = ()=>{
 
 
     return (
-
         <>
             <ContentFooter>
                 <FooterBox>
@@ -23,10 +22,10 @@ const Footer = ()=>{
                             <BsFillHouseFill style={{fontSize:"25px", color:"#eee",}}/> <P>Corregidora 13, Morelita, Tlapehuala, Guerrero, Mexico.</P>
                         </Box>
                         <Box>
-                            <BsTelephoneFill  style={{fontSize:"25px", color:"#eee",}}/> <P><A href="tel:+551155712751" >+55 11 55712751</A></P>
+                            <BsTelephoneFill  style={{fontSize:"25px", color:"#eee",}}/> <P><A href="tel:+524351070550" >+52 435-107-0550</A> Ó <br/> <A href="tel:+524351007849" >+52 435-100-7849</A></P>
                         </Box>
                         <Box>
-                            <MdOutlineEmail style={{fontSize:"25px", color:"#eee",}}/> <P><A href="mailto:contato@apeperia.com">contato@apeperia.com</A></P>
+                            <MdOutlineEmail style={{fontSize:"25px", color:"#eee",}}/> <P><A  href="mailto:gruasarreola@hotmail.com">gruasarreola@hotmail.com</A></P>
                         </Box>
                         <Box>
                             <BiTimer style={{fontSize:"25px", color:"#eee",}}/> <P>24/7 horas</P>

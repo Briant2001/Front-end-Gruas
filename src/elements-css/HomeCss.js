@@ -100,19 +100,43 @@ const Iframe = styled.iframe`
     margin:0 auto;
     width: 60%;
     margin: 10px;
+    flex: 1;
+    -ms-flex: 1; 
 
 `;
 const Domicilio = styled.div`
-
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    display: flex;  
+    flex: 1;
+    -ms-flex: 1; 
 `;
 const CardDom = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: #79A5E5;
+    border-radius: 5px;
+    width: 350px;
+    padding: 15px;
 `;
-
+const Item = styled.div`
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: left;
+    p{
+        margin: 0;
+        margin-left: 15px;
+        flex: 1;
+        -ms-flex: 1;
+        color: #D4DFF2;
+    }
+    a{
+        color: #D4DFF2;
+        text-decoration: underline;
+    }
+`;
 const Texto =styled.p`
     color: black;
     margin-bottom: 5px;
@@ -143,6 +167,6 @@ const ReactPlay = styled.div`
 export {ContenedorAzul,ContenedorBlanco,
     ContentInfor,BotonCorreo,
     Box,BoxGrua,Title,P2,Img2,
-    ContentUbicacion,ContentMap,Iframe,H2,Domicilio,CardDom,Texto,
+    ContentUbicacion,ContentMap,Iframe,H2,Domicilio,CardDom,Item,Texto,
     ContentVideos,ReactPlay
 }
