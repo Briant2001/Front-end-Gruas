@@ -32,7 +32,7 @@ const Li = styled(Link)`
     list-style: none;
     cursor: pointer;
     padding: 5px;
-    border-bottom: 3px solid #00161C;
+    
     border-radius:3px ;
     text-decoration: none;
     color: #fff;
@@ -41,24 +41,35 @@ const Li = styled(Link)`
         //color: #636363;
     }
 
-        ${(props) => {
-            switch (props.barra) {
-                case "true":
+        /* ${(props) => {
+            switch (props.to) {
+                case "/":
                     return css`
+                        &{border: none;}
                         &&{border-bottom:${border} ;}
                     `;
-                    case "false":
-                        return css`
-                            &{border-bottom:none ;}
-                        
-                        `;
+                case "/Servicios":
+                    return css`
+                        &{border: none;}
+                        &&{border-bottom:${border} ;}
+                    `;
                 default:
                         return css`
                             &{border-bottom:none ;}
 
                     `;
             }
-        }}
+        }} */
+        /* ${props => props.border==="true" && css`
+            &{border: none;}
+            &&{border-bottom:${border} ;}
+
+        `}
+        ${props => props.border==="true" && css`
+            &{border: none;}
+            &&{border-bottom:${border} ;}
+
+        `} */
     
     
 `;

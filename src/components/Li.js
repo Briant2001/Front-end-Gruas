@@ -5,7 +5,9 @@ import { useEffect } from "react";
 
 
 const Listas = ({children,clase,to})=>{
-    console.log(window.location.pathname);
+    
+    
+
     const addClass = (e)=>{
         const border = document.querySelectorAll(".border");
         for (let index = 0; index < border.length; index++) {
@@ -16,7 +18,7 @@ const Listas = ({children,clase,to})=>{
 
     return(
             <>
-                <Li onClick={addClass} className={clase} to={to}>
+                <Li onClick={addClass}  className={clase} to={to}>
                     {children}
                 </Li>
             </>

@@ -25,14 +25,10 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
-                    <Route path="/Servicios" element={<Servicio 
-                    />}></Route>
-                    <Route path="/Facturacion" element={<Facturacion
-                    />}></Route>
-                    <Route path="/Contacto" element={<Contacto
-                    />}></Route>
-                    <Route path="/PresupuestoEnLinea" element={<Presupuesto
-                    />}></Route>
+                    <Route path="/Servicios" element={<Servicio/>}></Route>
+                    <Route path="/Facturacion" element={<Facturacion/>}></Route>
+                    <Route path="/Contacto" element={<Contacto/>}></Route>
+                    <Route path="/PresupuestoEnLinea" element={<Presupuesto/>}></Route>
                 </Routes>
                 
             </main>

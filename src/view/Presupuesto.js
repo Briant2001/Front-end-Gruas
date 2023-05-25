@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { ComponentsInput } from "../components/Inputs"
-import { Boton, NotaDatos, ParrafoInformacion, TitleTuFactura } from "../elements-css/Formulario"
-import {Content, ContenPresupuesto, Formulario, A, Div,Area, DivBoton} from "../elements-css/Presupuesto"
+import { Boton, ContentComponents, Label, MnesajeError, NotaDatos, ParrafoInformacion, TitleTuFactura } from "../elements-css/Formulario"
+import {Content, ContenPresupuesto, Formulario, A, Div,Area, DivBoton, Select} from "../elements-css/Presupuesto"
 import { Title } from "../elements-css/HomeCss";
 import { Textarea } from "../elements-css/Contacto";
+import Swal from "sweetalert2";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
 const Presupuesto = ()=>{
     const [nombre,setNombre] = useState({campo:'',valido:null});
@@ -12,13 +15,53 @@ const Presupuesto = ()=>{
     const [lugar,setLugar] =  useState({campo:'',valido:null}); 
     const [entrega,setEntrega] =  useState({campo:'',valido:null}); 
     const [fecha,setFecha] =  useState({campo:'',valido:null}); 
+    const [formulario,setFormulario] = useState(null);
 
     const expresiones = {
         rfc:/^([A-Z,Ñ,&]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Z|\d]{3})$/, //Desarrollada por InvoiceOne.com.mx  http://validacfd.com/phpbb3/viewtopic.php?t=1978
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
         correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-        fecha:/^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$/,
+        fecha:/^([0-2][0-9]|3[0-1])(\/|-)([1-9]|0[1-9]|1[0-2])\2(\d{4})$/,
+    }
+    const onSubmit = (e)=>{
+        e.preventDefault();
+
+        if(
+            nombre.valido==="true" &&
+            correo.valido==="true" &&
+            telefono.valido==="true" &&
+            lugar.valido==="true" &&
+            entrega.valido==="true" &&
+            entrega.valido==="true" &&
+            fecha.valido==="true" 
+            
+            ){
+
+            setFormulario(true)
+            setNombre({campo:'',valido:null});
+            setCorreo({campo:'',valido:null});
+            setTelefono({campo:'',valido:null});
+            setLugar({campo:'',valido:null});
+            setEntrega({campo:'',valido:null});
+            setFecha({campo:'',valido:null});
+
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Solicitud enviada.',
+                showConfirmButton: false,
+                timer: 1700
+            })
+            document.querySelector(".textarea").value=""
+
+        }else{
+            setFormulario(false)
+
+        }
+
+
+       
     }
     return (
         <Content>
@@ -40,7 +83,7 @@ const Presupuesto = ()=>{
 
             <ContenPresupuesto>
                 <Title>Rellene los datos</Title>
-                <Formulario>
+                <Formulario action="" onSubmit={onSubmit}>
                     <ComponentsInput
                         title="Nombre completo"
                         estado={nombre}
@@ -54,6 +97,7 @@ const Presupuesto = ()=>{
                         
                     />
                     <ComponentsInput
+                        title="Telefono"
                         estado={telefono}
                         setEstado={setTelefono}
                         tipo="tel"
@@ -94,11 +138,11 @@ const Presupuesto = ()=>{
                         placeholder="Entrega"
                         name="entrega"
                         leyendaError="Campo Obligatorio"
-                        expresion={expresiones.fecha}
+                        expresion={expresiones.nombre}
                         
                     />
                     <ComponentsInput
-                        title="Nombre completo"
+                        title="Fecha"
                         estado={fecha}
                         setEstado={setFecha}
                         tipo="date"
@@ -107,13 +151,16 @@ const Presupuesto = ()=>{
                         name="fecha"
                         leyendaError="Debe asginar una fecha"
                         expresion={expresiones.fecha}
-                        
                     />
-                    <select aria-invalid="false" name="tipo">
-                        <option value="Motocicleta"></option>
-                        <option value="Automovil"></option>
-                        <option value="Camion"></option>
-                    </select>
+                    <ContentComponents>
+                        <Label  htmlFor="tipo" >Tipo de Vehiculo</Label>
+                        <Select aria-invalid="false" name="tipo" id="tipo">
+                            <option value="Motocicleta">Motocicleta</option>
+                            <option value="Automovil">Automovil</option>
+                            <option value="Camion">Camion</option>
+                        </Select>
+                    </ContentComponents>
+                    
                     <ComponentsInput
                         title="Nombre completo"
                         estado={nombre}
@@ -127,8 +174,17 @@ const Presupuesto = ()=>{
                     
                     />
                     <Area>
-                        <Textarea placeholder="Escriba su mensaje" ></Textarea>
+                        <Textarea className="textarea" placeholder="Escriba su mensaje" ></Textarea>
                     </Area>
+                    {
+                    formulario === false &&
+                    <MnesajeError grid="2">
+                        <p>
+                            <FontAwesomeIcon icon={faExclamationTriangle}/>
+                            <b>Error:</b> Por favor rrellene el formulario correctamente.
+                        </p>
+                    </MnesajeError>
+                }
                     <DivBoton>
                         <Boton>Enviar</Boton>
                     </DivBoton>

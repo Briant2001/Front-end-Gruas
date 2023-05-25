@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const colors ={
     colorCenizaOscuro:"#4F4C4C"
@@ -105,19 +105,25 @@ const Iframe = styled.iframe`
 
 `;
 const Domicilio = styled.div`
-    justify-content: center;
+
+    
     display: flex;  
     flex: 1;
     -ms-flex: 1; 
+    ${props => props.ancho != null && css`
+        width: 100%;
+        flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 40%;
+    `}
 `;
 const CardDom = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: #79A5E5;
+    background: #DFE3F5;
     border-radius: 5px;
-    width: 350px;
-    padding: 15px;
+    width: 100%;
+    padding: 35px;
 `;
 const Item = styled.div`
     display:flex;
@@ -130,10 +136,11 @@ const Item = styled.div`
         margin-left: 15px;
         flex: 1;
         -ms-flex: 1;
-        color: #D4DFF2;
+        color: rgba(0,0,0,.6);
     }
     a{
-        color: #D4DFF2;
+        color: rgba(0,0,0,.6);
+
         text-decoration: underline;
     }
 `;

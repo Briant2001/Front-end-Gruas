@@ -23,8 +23,8 @@ const Facturacion = ()=>{
         correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
         telefono: /^\d{7,14}$/, // 7 a 14 numeros.
         codigo:/^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/,
-      }
-      const onSubmit = (e) =>{
+    }
+        const onSubmit = (e) =>{
         e.preventDefault();
         if (
             rfc.valido=="true" &&
@@ -34,7 +34,7 @@ const Facturacion = ()=>{
             codigo.valido==='true'&&
             terminos
             
-          ) {
+        ) {
             setFormulario(true);
             setRfc({campo: '',valido:null})
             setNombre({campo: '',valido:null});
@@ -43,38 +43,28 @@ const Facturacion = ()=>{
             setCodigo({campo: '',valido:null});
             setTerminos(false);
             let json = JSON.stringify({n:"ss"})
-            fetch("http://localhost:3001/transaction",{
-                method:"Post",
-                body : json
-            }).then(x=>{
-                console.log(x);
-            })
-            
-            // const MySwal = withReactContent(Swal)
-            
-            // MySwal.fire({
-            //   title: <p>Hello World</p>,
-            //   didOpen: () => {
-            //     // `MySwal` is a subclass of `Swal` with all the same instance & static methods
-            //     MySwal.showLoading()
-            //   },
-            // }).then(() => {
-            //   return MySwal.fire(<p>Shorthand works too</p>)
+            // fetch("http://localhost:3001/transaction",{
+            //     method:"Post",
+            //     body : json
+            // }).then(x=>{
+            //     console.log(x);
             // })
+            
+            
             Swal.fire({
                 position: 'center',
                 icon: 'success',
                 title: 'Solicitud enviada.',
                 showConfirmButton: false,
                 timer: 1700
-              })
-         }else{
-          setFormulario(false)
+            })
+        }else{
+        setFormulario(false)
     
         }
     
-     
-      }
+    
+    }
     return (
         <ContentTuFactura>
             <TitleTuFactura>Tú Factura</TitleTuFactura>

@@ -4,6 +4,9 @@ import { ContentnServicios,ContentDataGrid,Titulo,Grid1,H2,ParrafoHeader,
 import { BiTimer } from 'react-icons/bi';
 import { RiMoneyDollarCircleFill } from 'react-icons/ri';
 import { FiUserCheck } from 'react-icons/fi';
+import { Route } from "react-router-dom";
+import { Listas } from "./Li";
+import { Li } from "../elements-css/Menu";
 const GridServices =()=>{ 
     return (
 
@@ -27,7 +30,9 @@ const GridServices =()=>{
                     </ParrafoBody>
                     
                     <ParrafoFooter>Contamos con camiones y material especializado para el traslado de motocicletas y turismos.</ParrafoFooter>
-                    <Button>Cotizar Ahora</Button>
+                    <Li barra="false" to="/PresupuestoEnLinea">
+                        <Button>Cotizar Ahora</Button>
+                    </Li>
                 </Grid1>
 
 

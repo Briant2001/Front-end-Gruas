@@ -9,15 +9,37 @@ const ComponentsInput = ({title,estado, setEstado,tipo,label,placeholder,name,le
     }
 
     const validationExpression = ()=>{
-        if (expresion.test(estado.campo)) {
-            setEstado({...estado,valido:"true"})
-        if (validacionRFC) {
-            validacionRFC(estado);
-        }
+       
+        if(tipo=="date"){
+            console.log("date");
+            const date = new Date(estado.campo);
+            const date2 = date.getDate() +"/"+ date.getMonth() +"/"+ date.getFullYear();
+    
+            if(expresion.test(date2)){
+                setEstado({...estado,valido:"true"})
+
+            }else{
+                
+                
+                setEstado({...estado,valido:"false"})
+                console.log("No valido");
+            }
         }else{
-            setEstado({...estado,valido:"false"})
-            console.log("No valido");
+            if (expresion.test(estado.campo)) {
+
+                setEstado({...estado,valido:"true"})
+    
+            if (validacionRFC) {
+                validacionRFC(estado);
+            }
+            }else{
+                
+                
+                setEstado({...estado,valido:"false"})
+                console.log("No valido");
+            }
         }
+        
     }
     return (
         <ContentComponents>

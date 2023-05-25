@@ -170,6 +170,7 @@ const Boton = styled.button`
 `;
 
 const MnesajeError = styled.div`
+    
     height: 100%;
     line-height:20px;
     background: #F66060;
@@ -182,7 +183,16 @@ const MnesajeError = styled.div`
     b{
         margin-left:10px;
     }
-
+    ${props => props.grid=="1" && css`
+        grid-column: 1 span;
+        font-size: 15px;
+        padding: 9px;
+    `}
+    ${props => props.grid=="2" && css`
+        grid-column: 2 span;
+        padding: 10px;
+        font-size: 15px;
+    `}
 `;
 const ContentImagen=styled.div`
     width: 50%;
