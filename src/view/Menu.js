@@ -48,7 +48,7 @@ const Menu = ()=>{
                 </div>
                 <div>
                     <Ul>
-                        <LiRedes> <FaFacebook size={30}/></LiRedes>
+                        <LiRedes href="https://www.facebook.com/gruas.arreola.7?mibextid=LQQJ4d" target="_blank"> <FaFacebook size={30}/></LiRedes>
                         <LiRedes> <FaWhatsapp size={30}/></LiRedes>
                     </Ul>              
                 </div>

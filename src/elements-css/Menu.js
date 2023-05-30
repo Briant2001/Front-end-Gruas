@@ -78,7 +78,8 @@ const Li = styled(Link)`
 `;
 const border = " 3px solid #fff !important";
 
-const LiRedes = styled.li`
+const LiRedes = styled.a
+`
     list-style: none;
     cursor: pointer;
     padding: 5px;

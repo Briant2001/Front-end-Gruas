@@ -53,13 +53,7 @@ const Footer = ()=>{
                     <FooterTitulo>Siguenos en</FooterTitulo>
                     <ContentRedes>
                         <BoxRed>
-                            <FaFacebook size={30} style={{marginRight:"8px"}}/>Facebook
-                        </BoxRed>
-                        <BoxRed>
-                            <FaFacebook size={30} style={{marginRight:"8px"}}/>Facebook
-                        </BoxRed>
-                        <BoxRed>
-                            <FaFacebook size={30} style={{marginRight:"8px"}}/>Facebook
+                            <a href="https://www.facebook.com/gruas.arreola.7?mibextid=LQQJ4d" target="_blank"> <FaFacebook size={30} style={{marginRight:"8px"}}/></a>
                         </BoxRed>
                     </ContentRedes>
                     
