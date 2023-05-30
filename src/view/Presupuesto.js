@@ -7,6 +7,7 @@ import { Textarea } from "../elements-css/Contacto";
 import Swal from "sweetalert2";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
+import { EnviarPresupuesto } from "../servicios/Servicios";
 
 const Presupuesto = ()=>{
     const [nombre,setNombre] = useState({campo:'',valido:null});
@@ -16,7 +17,7 @@ const Presupuesto = ()=>{
     const [entrega,setEntrega] =  useState({campo:'',valido:null}); 
     const [fecha,setFecha] =  useState({campo:'',valido:null}); 
     const [formulario,setFormulario] = useState(null);
-
+    const area = document.querySelector('.textarea')
     const expresiones = {
         rfc:/^([A-Z,Ñ,&]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[A-Z|\d]{3})$/, //Desarrollada por InvoiceOne.com.mx  http://validacfd.com/phpbb3/viewtopic.php?t=1978
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -33,11 +34,13 @@ const Presupuesto = ()=>{
             telefono.valido==="true" &&
             lugar.valido==="true" &&
             entrega.valido==="true" &&
-            entrega.valido==="true" &&
             fecha.valido==="true" 
             
             ){
-
+                const tipoServicio = document.querySelector(".tipo").value;
+                
+                EnviarPresupuesto(nombre.campo,correo.campo,telefono.campo,lugar.campo,
+                entrega.campo,fecha.campo,tipoServicio,area.value)
             setFormulario(true)
             setNombre({campo:'',valido:null});
             setCorreo({campo:'',valido:null});
@@ -45,7 +48,7 @@ const Presupuesto = ()=>{
             setLugar({campo:'',valido:null});
             setEntrega({campo:'',valido:null});
             setFecha({campo:'',valido:null});
-
+            area.value=''
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -154,14 +157,14 @@ const Presupuesto = ()=>{
                     />
                     <ContentComponents>
                         <Label  htmlFor="tipo" >Tipo de Vehiculo</Label>
-                        <Select aria-invalid="false" name="tipo" id="tipo">
+                        <Select className="tipo" aria-invalid="false" name="tipo" id="tipo">
                             <option value="Motocicleta">Motocicleta</option>
                             <option value="Automovil">Automovil</option>
                             <option value="Camion">Camion</option>
                         </Select>
                     </ContentComponents>
                     
-                    <ComponentsInput
+                    {/* <ComponentsInput
                         title="Nombre completo"
                         estado={nombre}
                         setEstado={setNombre}
@@ -172,7 +175,7 @@ const Presupuesto = ()=>{
                         leyendaError="Formato de nombre incorrecto"
                         expresion={expresiones.nombre}
                     
-                    />
+                    /> */}
                     <Area>
                         <Textarea className="textarea" placeholder="Escriba su mensaje" ></Textarea>
                     </Area>

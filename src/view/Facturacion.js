@@ -7,6 +7,7 @@ import { Boton, ContenedorBotonCent, MnesajeError, Formulario, ContentTuFactura,
     ,NotaDatos,Aviso } from "../elements-css/Formulario";
 import { validacionRFC } from '../components/validacionRcf';
 import Swal from 'sweetalert2'
+import { EnviarFaturacion } from "../servicios/Servicios";
 const Facturacion = ()=>{
     //document.querySelector('.content-modal').style.display="none";
     const [rfc,setRfc] = useState({campo:'',valido:null});
@@ -35,6 +36,7 @@ const Facturacion = ()=>{
             terminos
             
         ) {
+            EnviarFaturacion(rfc.campo,nombre.campo,correo.campo,telefono.campo,codigo.campo)
             setFormulario(true);
             setRfc({campo: '',valido:null})
             setNombre({campo: '',valido:null});

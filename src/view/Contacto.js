@@ -13,6 +13,7 @@ import { BsFillHouseFill, BsTelephoneFill } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { BoxRed, ContentRedes, FooterBox, FooterTitulo } from "../elements-css/Footer";
 import { FaFacebook } from "react-icons/fa";
+import { EnviarContacto } from "../servicios/Servicios";
 
 const Contacto = ()=>{
     const expresiones = { 
@@ -24,6 +25,8 @@ const Contacto = ()=>{
         const [correo,setCorreo] = useState({campo:'',valido:null});
         const [telefono,setTelefono] = useState({campo:'',valido:null});
         const [formulario,setFormulario] = useState(null);
+        const area = document.querySelector(".textarea")
+
       const onSubmit = (e)=>{
         e.preventDefault();
 
@@ -32,10 +35,13 @@ const Contacto = ()=>{
             correo.valido==="true" &&
             telefono.valido==="true" 
         ) {
+
+            EnviarContacto(nombre.campo,correo.campo,telefono.campo,area.value)
             setFormulario(true)
             setNombre({campo: '',valido:null})
             setCorreo({campo: '',valido:null})
             setTelefono({campo: '',valido:null})
+            area.value="";
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -43,7 +49,6 @@ const Contacto = ()=>{
                 showConfirmButton: false,
                 timer: 1700
               })
-            document.querySelector(".textarea").value=""
 
         }else{
             setFormulario(false);

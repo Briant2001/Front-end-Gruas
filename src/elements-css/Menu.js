@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import logo from '../assets/logo-gruas.png'
-import {Link } from "react-router-dom";
+import {Link, NavLink } from "react-router-dom";
 
 const colors = {
     fondo:"#00161C"
@@ -40,7 +40,10 @@ const Li = styled(Link)`
         border-bottom: 3px solid #636363;
         //color: #636363;
     }
-
+    ${props => props.border==="true" && css`
+        border-bottom:#eee ;
+    
+    `}
         /* ${(props) => {
             switch (props.to) {
                 case "/":
